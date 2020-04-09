@@ -15,6 +15,7 @@ class MoCo(Model):
         self.img_shape = img_shape
         self.feature_dim = feature_dim
         self.queue = None
+        self.queue_len = queue_len
         self.q_enc = Sequential([
             ResNet50(include_top=False, weights=None, input_shape=self.img_shape),
             Flatten(),
