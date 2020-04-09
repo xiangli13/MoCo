@@ -4,7 +4,7 @@ import numpy as np
 
 from tensorflow.keras.models import Model, Sequential
 from tensorflow.keras.layers import Flatten, Dense
-from tensorflow.keras.applications.mobilenet_v2 import MobileNetV2
+from tensorflow.keras.applications import ResNet50
 from tensorflow.keras.losses import sparse_categorical_crossentropy
 
 class MoCo(Model):
