@@ -9,7 +9,7 @@ from tensorflow.keras.losses import sparse_categorical_crossentropy
 
 class MoCo(Model):
     """Momentum Contrastive Feature Learning"""
-    def __init__(self, m=0.1, img_shape=(256, 256, 3), queue_len=256, feature_dim=128):
+    def __init__(self, m=0.999, img_shape=(256, 256, 3), queue_len=1024, feature_dim=128):
         super(MoCo, self).__init__(dynamic=True)
         self.m = m
         self.img_shape = img_shape
